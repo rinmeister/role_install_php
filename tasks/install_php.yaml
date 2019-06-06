@@ -66,11 +66,10 @@
   become: yes
 - name: restart services
   systemd:
-      name: "{{ daemons }}"
+      name: "{{ item }}"
       daemon_reload: yes
       state: restarted
-  vars:
-       daemons:
-           - nginx.service
-           - php7.2-fpm.service
+   loop:
+       - nginx.service
+       - php7.2-fpm.service
 
