@@ -34,3 +34,9 @@
           - php7.2-zip
           - php7.2-curl
   become: yes
+- name: configure php.ini
+  lineinfile:
+      path: /etc/php/7.2/fpm/php.ini
+      regexp: '^memory_limit ='
+      line: 'memory_limit = 256M'
+  become: yes
