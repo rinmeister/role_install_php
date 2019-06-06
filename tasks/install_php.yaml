@@ -5,7 +5,7 @@
       name: software-properties-common
   become: yes
 - name: add repository
-  apit-repository:
+  apt-repository:
       repo: ppa:ondrej/ph
       state: present
   become: yes
