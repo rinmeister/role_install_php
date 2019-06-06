@@ -69,7 +69,7 @@
       name: "{{ item }}"
       daemon_reload: yes
       state: restarted
-   loop:
+  loop:
        - nginx.service
        - php7.2-fpm.service
 
