@@ -71,4 +71,5 @@
   loop:
        - nginx.service
        - php7.2-fpm.service
+  become: yes
 
