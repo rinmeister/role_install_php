@@ -40,3 +40,27 @@
       regexp: '^memory_limit ='
       line: 'memory_limit = 256M'
   become: yes
+- name: configure php.ini
+  lineinfile:
+      path: /etc/php/7.2/fpm/php.ini
+      regexp: '^upload_max_filesize ='
+      line: 'upload_max_filesize = 100M'
+  become: yes
+- name: configure php.ini
+  lineinfile:
+      path: /etc/php/7.2/fpm/php.ini
+      regexp: '^;cgi.fix_pathinfo='
+      line: 'cgi.fix_pathinfo=0'
+  become: yes
+- name: configure php.ini
+  lineinfile:
+      path: /etc/php/7.2/fpm/php.ini
+      regexp: '^max_execution_time ='
+      line: 'max_execution_time = 360'
+  become: yes
+- name: configure php.ini
+  lineinfile:
+      path: /etc/php/7.2/fpm/php.ini
+      regexp: '^;date.timezone ='
+      line: 'date.timezone = Netherlands/Amsterdam' 
+  become: yes
