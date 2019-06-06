@@ -3,9 +3,10 @@
 - name: install php
   apt:
       name: software-properties-common
+      update_cache: yes
   become: yes
 - name: add repository
-  apt-repository:
+  apt_repository:
       repo: ppa:ondrej/ph
       state: present
   become: yes
