@@ -1,3 +1,3 @@
 ---
 # tasks file for role_install_php
-include: install_php.yaml
+- include: install_php.yaml
