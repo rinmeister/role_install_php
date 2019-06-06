@@ -33,3 +33,4 @@
           - php7.2-cli
           - php7.2-zip
           - php7.2-curl
+  become: yes
