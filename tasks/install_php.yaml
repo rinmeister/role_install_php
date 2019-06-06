@@ -7,7 +7,7 @@
   become: yes
 - name: add repository
   apt_repository:
-      repo: ppa:ondrej/ph
+      repo: ppa:ondrej/php
       state: present
   become: yes
 - name: apt update
