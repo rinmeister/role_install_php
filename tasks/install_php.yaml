@@ -64,3 +64,13 @@
       regexp: '^;date.timezone ='
       line: 'date.timezone = Netherlands/Amsterdam' 
   become: yes
+- name: restart services
+  systemd:
+      name: "{{ daemons }}"
+      daemon_reload: yes
+      state: restarted
+   vars:
+       daemons:
+           - nginx.service
+           - php7.2-fpm.service
+
